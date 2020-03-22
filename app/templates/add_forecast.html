@@ -1,0 +1,16 @@
+<html>
+    <head>
+
+<div class="formwrapper">
+  <h2 class="title">Forecast</h2>
+  <form method="POST" action="/forecast">
+  {{ form.csrf_token }}
+      <div class="form-field">{{ form.city.label }} {{ form.city(size=20) }}</div>
+      <div class="form-field">{{ form.date.label }} {{ form.date }}</div>
+      <div class="form-field">{{ form.temperature.label }} {{ form.temperature }}</div>
+      <input type="submit" value="Go">
+      {{ form.submit }}
+  </form>
+</div>
+</body>
+</html>
